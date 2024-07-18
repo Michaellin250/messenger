@@ -4,6 +4,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { ChatComponent } from "../app/chat/chat.component";
 
 @Component({
   selector: 'app-side-bar',
@@ -11,7 +12,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
   imports: [MatToolbarModule,
     MatIconModule,
     MatSidenavModule,
-    MatListModule],
+    MatListModule, ChatComponent],
   templateUrl: './side-bar.component.html',
   styleUrl: './side-bar.component.css'
 })
