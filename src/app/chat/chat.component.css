@@ -1,0 +1,28 @@
+div {
+    height: 96vh;
+    width: 38vh;
+    border-radius: 18px;
+    background-position: left top;
+    background-repeat: repeat;
+    background-color: #fff;
+  }
+
+  h5{
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 23px;
+    padding-top: 10px;
+    padding-left: 20px;
+    display:inline-block;
+    
+  }
+
+  .icon{
+    transform: scale(1.5);
+    float:right;
+    padding-top: 10px;
+    padding-right: 20px;
+}
+  
+
+ 

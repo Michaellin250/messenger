@@ -1,0 +1,24 @@
+.expanded {
+    width: auto;   
+}
+
+.bottomStick {
+    position:absolute; 
+    bottom:0
+}
+.bottomRelative{
+    position:relative;
+}
+
+.alignedCenter{
+    vertical-align: middle;
+    margin: 10px 5px;
+}
+
+.right {
+    position: absolute;
+    right: 0px;
+  }
+ 
+
+

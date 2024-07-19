@@ -432,6 +432,9 @@ var Breakpoints = {
 };
 
 export {
+  coerceBooleanProperty,
+  coerceNumberProperty,
+  coerceElement,
   Platform,
   normalizePassiveListenerOptions,
   RtlScrollAxisType,
@@ -441,12 +444,9 @@ export {
   _getFocusedElementPierceShadowDom,
   _getEventTarget,
   _isTestEnvironment,
-  coerceBooleanProperty,
-  coerceNumberProperty,
-  coerceElement,
   LayoutModule,
   MediaMatcher,
   BreakpointObserver,
   Breakpoints
 };
-//# sourceMappingURL=chunk-HAUGGUEF.js.map
+//# sourceMappingURL=chunk-T35EZ3LP.js.map

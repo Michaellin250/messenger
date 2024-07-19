@@ -14,25 +14,22 @@ import { ChatComponent } from "../app/chat/chat.component";
     MatSidenavModule,
     MatListModule, ChatComponent],
   templateUrl: './side-bar.component.html',
-  styleUrl: './side-bar.component.css'
+  styleUrls: ["./side-bar.component.css", "../shared.css"]
 })
 export class SideBarComponent {
 
   title = 'material-responsive-sidenav';
   @ViewChild(MatSidenav)
-  sidenav!: MatSidenav;
+  public sidenav!: MatSidenav;
   isMobile= true;
-  isCollapsed = true;
+  isCollapsed = false;
 
   events: string[] = [];
-  opened: boolean;
   placeIconBottom:string = '';
 
 
   constructor(private observer: BreakpointObserver){
-    this.opened = true;
     this.placeIconBottom = 'bottomStick';
-    console.log("here");
   }
 
   @HostListener('window:resize', ['$event'])
@@ -60,7 +57,10 @@ export class SideBarComponent {
       this.sidenav.toggle();
       this.isCollapsed = false; // On mobile, the menu can never be collapsed
     } else {
-      this.sidenav.open(); // On desktop/tablet, the menu can never be fully closed
+
+        this.sidenav.open();
+
+      // On desktop/tablet, the menu can never be fully closed
       this.isCollapsed = !this.isCollapsed;
     }
   }

@@ -20,7 +20,7 @@ import {
   InteractivityChecker,
   MatCommonModule,
   hasModifierKey
-} from "./chunk-HUBS3IJ4.js";
+} from "./chunk-EGMUFSCN.js";
 import {
   Platform,
   RtlScrollAxisType,
@@ -29,7 +29,7 @@ import {
   coerceNumberProperty,
   getRtlScrollAxisType,
   supportsScrollBehavior
-} from "./chunk-HAUGGUEF.js";
+} from "./chunk-T35EZ3LP.js";
 import {
   DOCUMENT
 } from "./chunk-LDB7ZIZ7.js";

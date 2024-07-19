@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-chat',
   standalone: true,
-  imports: [],
+  imports: [MatIconModule],
   templateUrl: './chat.component.html',
-  styleUrl: './chat.component.css'
+  styleUrls: ['./chat.component.css', "../../shared.css"]
 })
 export class ChatComponent {
 
