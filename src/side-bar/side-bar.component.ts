@@ -19,12 +19,12 @@ import { ChatComponent } from "../app/chat/chat.component";
 export class SideBarComponent {
 
   title = 'material-responsive-sidenav';
+  width?:string;
   @ViewChild(MatSidenav)
   public sidenav!: MatSidenav;
-  isMobile= true;
-  isCollapsed = false;
+  isOpened = false;
+  
 
-  events: string[] = [];
   placeIconBottom:string = '';
 
 
@@ -43,26 +43,17 @@ export class SideBarComponent {
   }
 
   ngOnInit(){
-    this.observer.observe(['(max-width: 800px)']).subscribe((screenSize) => {
-      if(screenSize.matches){
-        this.isMobile = true;
-      } else {
-        this.isMobile = false;
-      }
-    });
+
   }
 
   toggleMenu() {
-    if(this.isMobile){
-      this.sidenav.toggle();
-      this.isCollapsed = false; // On mobile, the menu can never be collapsed
-    } else {
 
-        this.sidenav.open();
-
-      // On desktop/tablet, the menu can never be fully closed
-      this.isCollapsed = !this.isCollapsed;
+    if(this.isOpened){
+      this.width = "fit-content";
+    } else{
+      this.width = "150px";
     }
-  }
+      this.isOpened = !this.isOpened;
+    }
 
 }

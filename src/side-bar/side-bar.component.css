@@ -17,9 +17,10 @@ mat-sidenav-container {
 }
 
 mat-sidenav {
+    width:auto;
     padding-top: 3.5rem;
     background-color:   #F5F5F5;
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: 200px) {
       padding-top: 1rem;
       background-color: #F5F5F5;
     }
@@ -48,12 +49,9 @@ mat-sidenav-content{
 .side-by-side{
    display:inline-block;
    align-items: center;
-   /* border-width: 2px;
-   border-color: red;
-   border-style: dashed; */
 }
 
-.expanded {
-    width: auto;   
+.expanded{
+    width:fit-content;
 }
 
