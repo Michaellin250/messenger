@@ -5,6 +5,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { ChatComponent } from "../app/chat/chat.component";
+import { NewMessageComponent } from "../new-message/new-message.component";
 
 @Component({
   selector: 'app-side-bar',
@@ -12,7 +13,7 @@ import { ChatComponent } from "../app/chat/chat.component";
   imports: [MatToolbarModule,
     MatIconModule,
     MatSidenavModule,
-    MatListModule, ChatComponent],
+    MatListModule, ChatComponent, NewMessageComponent],
   templateUrl: './side-bar.component.html',
   styleUrls: ["./side-bar.component.css", "../shared.css"]
 })
@@ -26,7 +27,6 @@ export class SideBarComponent {
   
 
   placeIconBottom:string = '';
-
 
   constructor(private observer: BreakpointObserver){
     this.placeIconBottom = 'bottomStick';

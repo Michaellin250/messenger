@@ -1,0 +1,10 @@
+.largeMessage {
+
+    height: 96vh;
+    width: 100vh;
+    border-radius: 18px;
+    background-repeat: repeat;
+    background-color: #fff;
+    display: inline-block;
+    vertical-align: middle;
+  }

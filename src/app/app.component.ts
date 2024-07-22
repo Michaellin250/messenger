@@ -6,12 +6,13 @@ import { BreakpointObserver } from '@angular/cdk/layout';
 import { MatListModule, MatNavList } from '@angular/material/list';
 import { MatIcon } from '@angular/material/icon';
 import { ChatComponent } from './chat/chat.component';
+import { SearchBarComponent } from "../search-bar/search-bar.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, SideBarComponent, MatSidenav, MatNavList, MatIcon, 
-    MatSidenavContainer, MatSidenavContent, MatListModule, ChatComponent],
+  imports: [RouterOutlet, SideBarComponent, MatSidenav, MatNavList, MatIcon,
+    MatSidenavContainer, MatSidenavContent, MatListModule, ChatComponent, SearchBarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

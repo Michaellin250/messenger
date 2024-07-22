@@ -1,10 +1,14 @@
-<div>
-
-    <div>
-
-        <h5>Chats</h5>
-        <mat-icon class="icon">edit_note</mat-icon>
-    </div>
-   
-
+<div class="largeChat">
+    <mat-list>
+        <mat-list-item>
+            <h5>Chats</h5>
+            <button class="icon" (click)="openNewChat()">
+                <mat-icon >edit_note</mat-icon>
+            </button>
+            
+        </mat-list-item>
+        <mat-list-item>
+            <app-search-bar />
+        </mat-list-item>
+    </mat-list>
 </div>

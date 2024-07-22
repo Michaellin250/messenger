@@ -1,0 +1,24 @@
+.searchStyle {
+
+  width: 350px;
+  height: 90px;
+}
+
+.searchIcon {
+  height:auto;
+  width:auto;
+}
+
+.search-part {
+  display: flex;
+  flex-direction: row;
+  width: 400px;
+}
+
+mat-form-field  {
+  font-size: 20px;
+  width: 500px;
+  height:40px;
+  display: flex;
+  flex-direction: row;
+}
