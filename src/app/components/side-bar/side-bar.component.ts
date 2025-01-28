@@ -1,20 +1,15 @@
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { Component, HostListener, ViewChild } from '@angular/core';
-import { MatIconModule } from '@angular/material/icon';
-import { MatListModule } from '@angular/material/list';
-import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
-import { MatToolbarModule } from '@angular/material/toolbar';
+import { SharedMaterialModule } from '../shared/shared-material.module'; 
 import { ChatComponent } from "../chat/chat.component";
 import { NewMessageComponent } from "../new-message/new-message.component";
 import { CommonModule } from '@angular/common';
-
+import { MatSidenav } from '@angular/material/sidenav';
 @Component({
   selector: 'app-side-bar',
   standalone: true,
-  imports: [MatToolbarModule,
-    MatIconModule,
-    MatSidenavModule,
-    MatListModule, ChatComponent, NewMessageComponent, CommonModule],
+  imports: [SharedMaterialModule,
+    ChatComponent, NewMessageComponent, CommonModule],
   templateUrl: './side-bar.component.html',
   styleUrls: ["./side-bar.component.css", "../../../shared.css"]
 })

@@ -1,23 +1,23 @@
 import { Component } from '@angular/core';
-import { MatIconModule } from '@angular/material/icon';
+import { SharedMaterialModule } from '../shared/shared-material.module'; 
 import { SearchBarComponent } from "../search-bar/search-bar.component";
-import { MatList, MatListItem } from '@angular/material/list';
+import { NewMessageComponent } from "../new-message/new-message.component";
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-chat',
   standalone: true,
-  imports: [MatIconModule, SearchBarComponent, MatListItem, MatList],
+  imports: [SharedMaterialModule,SearchBarComponent, NewMessageComponent, CommonModule],
   templateUrl: './chat.component.html',
   styleUrls: ['./chat.component.css', "../../../shared.css"]
 })
+
 export class ChatComponent {
 
-  isChatOpened = false;
+  isNewMessageOpened = false;
 
-  openNewChat(){
-
-    console.log("OPENED");
-    this.isChatOpened = !this.isChatOpened;
+  openNewMessage() {
+    this.isNewMessageOpened = !this.isNewMessageOpened;
   }
 
 }

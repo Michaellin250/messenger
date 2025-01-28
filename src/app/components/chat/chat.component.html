@@ -2,7 +2,7 @@
     <mat-list>
         <mat-list-item>
             <h5>Chats</h5>
-            <button class="icon" (click)="openNewChat()">
+            <button class="icon" (click)="openNewMessage()" aria-label="New Message">
                 <mat-icon >edit_note</mat-icon>
             </button>
             
@@ -11,4 +11,7 @@
             <app-search-bar />
         </mat-list-item>
     </mat-list>
+    <div *ngIf="isNewMessageOpened">
+        <app-new-message></app-new-message>  
+      </div>
 </div>
