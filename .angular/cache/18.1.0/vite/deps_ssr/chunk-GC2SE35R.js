@@ -1,6 +1,7 @@
+import { createRequire } from 'module';const require = createRequire(import.meta.url);
 import {
   getDOM
-} from "./chunk-YYDUAR3K.js";
+} from "./chunk-WIALKPXA.js";
 import {
   ChangeDetectorRef,
   Directive,
@@ -19,19 +20,15 @@ import {
   RuntimeError,
   Self,
   SkipSelf,
-  Subject,
   Version,
-  __spreadProps,
-  __spreadValues,
   booleanAttribute,
   computed,
-  forkJoin,
   forwardRef,
-  from,
   inject,
   isPromise,
   isSubscribable,
-  map,
+  require_cjs,
+  require_operators,
   setClassMetadata,
   signal,
   untracked,
@@ -47,9 +44,16 @@ import {
   ɵɵdirectiveInject,
   ɵɵgetInheritedFactory,
   ɵɵlistener
-} from "./chunk-26CJTHKL.js";
+} from "./chunk-KKSCXERX.js";
+import {
+  __spreadProps,
+  __spreadValues,
+  __toESM
+} from "./chunk-NQ4HTGF6.js";
 
 // node_modules/@angular/forms/fesm2022/forms.mjs
+var import_rxjs = __toESM(require_cjs(), 1);
+var import_operators = __toESM(require_operators(), 1);
 var _BaseControlValueAccessor = class _BaseControlValueAccessor {
   constructor(_renderer, _elementRef) {
     this._renderer = _renderer;
@@ -655,7 +659,7 @@ function isPresent(o) {
   return o != null;
 }
 function toObservable(value) {
-  const obs = isPromise(value) ? from(value) : value;
+  const obs = isPromise(value) ? (0, import_rxjs.from)(value) : value;
   if ((typeof ngDevMode === "undefined" || ngDevMode) && !isSubscribable(obs)) {
     let errorMessage = `Expected async validator to return Promise or Observable.`;
     if (typeof value === "object") {
@@ -700,7 +704,7 @@ function composeAsync(validators) {
   if (presentValidators.length == 0) return null;
   return function(control) {
     const observables = executeValidators(control, presentValidators).map(toObservable);
-    return forkJoin(observables).pipe(map(mergeErrors));
+    return (0, import_rxjs.forkJoin)(observables).pipe((0, import_operators.map)(mergeErrors));
   };
 }
 function composeAsyncValidators(validators) {
@@ -1387,7 +1391,7 @@ var AbstractControl = class {
     this.pristineReactive = signal(true);
     this._touched = computed(() => this.touchedReactive());
     this.touchedReactive = signal(false);
-    this._events = new Subject();
+    this._events = new import_rxjs.Subject();
     this.events = this._events.asObservable();
     this._onDisabledChange = [];
     this._assignValidators(validators);
@@ -6315,4 +6319,4 @@ export {
    * License: MIT
    *)
 */
-//# sourceMappingURL=chunk-AYI5PT4S.js.map
+//# sourceMappingURL=chunk-GC2SE35R.js.map

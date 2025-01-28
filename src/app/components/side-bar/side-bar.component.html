@@ -1,43 +1,28 @@
 <mat-sidenav-container autosize>
-  <mat-sidenav [style.width]="width" [mode]="'side'" [opened]="'true'">
+  <mat-sidenav [style.width]="width" [mode]="'side'" [opened]="true">
     <mat-nav-list>
-
+      
       <a mat-list-item>
         <mat-icon aria-hidden="false" class="alignedCenter">chat</mat-icon>
-
-        @if(isOpened){
-
-          Chats
-        }
+        <span *ngIf="isOpened">Chats</span>
       </a>
 
       <a mat-list-item>
         <mat-icon aria-hidden="false" class="alignedCenter">people</mat-icon>
-
-        @if(isOpened){
-          People
-        }
+        <span *ngIf="isOpened">People</span>
       </a>
 
       <a mat-list-item>
-
         <mat-icon aria-hidden="false" class="alignedCenter">house</mat-icon>
-
-        @if(isOpened){
-          House
-        }
+        <span *ngIf="isOpened">House</span>
       </a>
 
       <a mat-list-item>
-        <mat-icon aria-hidden="false" class="alignedCenter">restore from trash</mat-icon>
-
-        @if(isOpened){
-          Archive
-        }
+        <mat-icon aria-hidden="false" class="alignedCenter">restore_from_trash</mat-icon>
+        <span *ngIf="isOpened">Archive</span>
       </a>
 
-      <div [class]='placeIconBottom'>
-
+      <div [class]="placeIconBottom">
         <a mat-list-item>
           <mat-icon>person</mat-icon>
         </a>
@@ -46,10 +31,13 @@
           <mat-icon>view_sidebar</mat-icon>
         </a>
       </div>
+
     </mat-nav-list>
   </mat-sidenav>
+  
   <mat-sidenav-content>
-    <app-chat />
-    <app-new-message />
+    <app-chat></app-chat>
+    <app-new-message></app-new-message>
   </mat-sidenav-content>
+
 </mat-sidenav-container>

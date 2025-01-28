@@ -1,7 +1,7 @@
 import { createRequire } from 'module';const require = createRequire(import.meta.url);
 import {
   isPlatformBrowser
-} from "./chunk-5MR4DALA.js";
+} from "./chunk-WIALKPXA.js";
 import {
   CSP_NONCE,
   ElementRef,
@@ -502,4 +502,4 @@ export {
   BreakpointObserver,
   Breakpoints
 };
-//# sourceMappingURL=chunk-GTUWPEKW.js.map
+//# sourceMappingURL=chunk-EWR43PXD.js.map

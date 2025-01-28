@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
-import { SearchBarComponent } from "../../search-bar/search-bar.component";
+import { SearchBarComponent } from "../search-bar/search-bar.component";
 import { MatList, MatListItem } from '@angular/material/list';
 
 @Component({
@@ -8,7 +8,7 @@ import { MatList, MatListItem } from '@angular/material/list';
   standalone: true,
   imports: [MatIconModule, SearchBarComponent, MatListItem, MatList],
   templateUrl: './chat.component.html',
-  styleUrls: ['./chat.component.css', "../../shared.css"]
+  styleUrls: ['./chat.component.css', "../../../shared.css"]
 })
 export class ChatComponent {
 

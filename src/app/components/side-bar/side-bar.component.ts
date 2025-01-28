@@ -4,8 +4,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { ChatComponent } from "../app/chat/chat.component";
+import { ChatComponent } from "../chat/chat.component";
 import { NewMessageComponent } from "../new-message/new-message.component";
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-side-bar',
@@ -13,9 +14,9 @@ import { NewMessageComponent } from "../new-message/new-message.component";
   imports: [MatToolbarModule,
     MatIconModule,
     MatSidenavModule,
-    MatListModule, ChatComponent, NewMessageComponent],
+    MatListModule, ChatComponent, NewMessageComponent, CommonModule],
   templateUrl: './side-bar.component.html',
-  styleUrls: ["./side-bar.component.css", "../shared.css"]
+  styleUrls: ["./side-bar.component.css", "../../../shared.css"]
 })
 export class SideBarComponent {
 

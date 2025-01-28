@@ -1,6 +1,6 @@
 import {
   isPlatformBrowser
-} from "./chunk-YYDUAR3K.js";
+} from "./chunk-4DAYTPKE.js";
 import {
   CSP_NONCE,
   ElementRef,
@@ -502,4 +502,4 @@ export {
   BreakpointObserver,
   Breakpoints
 };
-//# sourceMappingURL=chunk-2AZCVW6K.js.map
+//# sourceMappingURL=chunk-QCUJ7RQX.js.map
