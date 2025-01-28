@@ -20,7 +20,7 @@ h5{
   
 }
 
-.icon{
+.clickable-icon{
   transform: scale(1.5);
   float:right;
   padding-top: 10px;
@@ -29,4 +29,6 @@ h5{
   width:auto;
   background-color: transparent;
   background: transparent;
+  cursor: pointer;
+  font-size: 24px;
 }
