@@ -4,22 +4,22 @@
       
       <a mat-list-item>
         <mat-icon aria-hidden="false" class="alignedCenter">chat</mat-icon>
-        <span *ngIf="isOpened">Chats</span>
+        <span *ngIf="isExpanded">Chats</span>
       </a>
 
       <a mat-list-item>
         <mat-icon aria-hidden="false" class="alignedCenter">people</mat-icon>
-        <span *ngIf="isOpened">People</span>
+        <span *ngIf="isExpanded">People</span>
       </a>
 
       <a mat-list-item>
         <mat-icon aria-hidden="false" class="alignedCenter">house</mat-icon>
-        <span *ngIf="isOpened">House</span>
+        <span *ngIf="isExpanded">House</span>
       </a>
 
       <a mat-list-item>
         <mat-icon aria-hidden="false" class="alignedCenter">restore_from_trash</mat-icon>
-        <span *ngIf="isOpened">Archive</span>
+        <span *ngIf="isExpanded">Archive</span>
       </a>
 
       <div [class]="placeIconBottom">
@@ -36,7 +36,8 @@
   </mat-sidenav>
   
   <mat-sidenav-content>
-    <app-chat></app-chat>
+    <app-chat (openNewMessage)="openNewMessage()"></app-chat>
+    <app-new-message *ngIf="isNewMessageVisible"></app-new-message>
   </mat-sidenav-content>
 
 </mat-sidenav-container>

@@ -19,7 +19,8 @@ export class SideBarComponent {
   width?:string;
   @ViewChild(MatSidenav)
   public sidenav!: MatSidenav;
-  isOpened = false;
+  isExpanded = false;
+  isNewMessageVisible = false;
   
 
   placeIconBottom:string = '';
@@ -44,12 +45,15 @@ export class SideBarComponent {
 
   toggleMenu() {
 
-    if(this.isOpened){
+    if(this.isExpanded){
       this.width = "fit-content";
     } else{
       this.width = "150px";
     }
-      this.isOpened = !this.isOpened;
-    }
-
+      this.isExpanded = !this.isExpanded;
+  }
+  
+  openNewMessage() {
+    this.isNewMessageVisible = !this.isNewMessageVisible; // Toggle the visibility
+  }
 }
