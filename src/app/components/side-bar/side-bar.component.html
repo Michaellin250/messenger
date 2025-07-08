@@ -36,8 +36,10 @@
   </mat-sidenav>
   
   <mat-sidenav-content>
-    <app-chat (openNewMessage)="openNewMessage()"></app-chat>
-    <app-new-message *ngIf="isNewMessageVisible"></app-new-message>
+    <div class="main-content">
+      <app-chat (openNewMessage)="openNewMessage()"></app-chat>
+      <app-new-message *ngIf="isNewMessageVisible"></app-new-message>
+    </div>
   </mat-sidenav-content>
 
 </mat-sidenav-container>

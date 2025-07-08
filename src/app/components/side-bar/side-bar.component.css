@@ -34,16 +34,35 @@ mat-sidenav {
     }
   }
 
-mat-sidenav-content{
+mat-sidenav-content {
     padding-top: 1rem;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
 }
-
 .under {
     display: flex;
     align-items: center;
 }
 
-.side-by-side{
-   display:inline-block;
-   align-items: center;
+.side-by-side {
+   display: flex;
+   align-items: stretch;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch; /* This ensures both children are same vertical height */
+    width: 100%;
+    height: 100%;
+    gap: 10px; /* Optional: spacing between chat and message panes */
+}
+
+.largeChat, .largeMessage {
+  height: 100%;
+  width: auto; /* or a percentage or fixed width */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
