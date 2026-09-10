@@ -1,13 +1,10 @@
 .largeChat {
-    height: 96vh;
-    width: 38vh;
+    height: 100%;
+    width: 320px;
+    flex-shrink: 0;
     border-radius: 18px;
-    background-position: left top;
-    background-repeat: repeat;
     background-color: #fff;
-    display: inline-block;
-    vertical-align: middle;
-    margin: 10px;
+    box-sizing: border-box;
   }
 
 h5{
