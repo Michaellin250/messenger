@@ -29,3 +29,7 @@ h5{
   cursor: pointer;
   font-size: 24px;
 }
+
+.chat-search {
+  padding: 4px 16px 12px;
+}
