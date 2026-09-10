@@ -15,8 +15,6 @@ export class ChatComponent {
 
   @Output() openNewMessage = new EventEmitter<void>();
 
-  isNewMessageOpened = false;
-
   open() {
     this.openNewMessage.emit();
   }
