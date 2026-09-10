@@ -9,4 +9,11 @@
     <div class="chat-search">
         <app-search-bar />
     </div>
+
+    <div class="chat-list">
+        <div class="chat-bubble" *ngFor="let chat of chats">
+            <div class="chat-avatar">{{ chat.charAt(0).toUpperCase() }}</div>
+            <span class="chat-name">{{ chat }}</span>
+        </div>
+    </div>
 </div>

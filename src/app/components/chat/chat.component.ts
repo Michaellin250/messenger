@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { SharedMaterialModule } from '../shared/shared-material.module'; 
 import { SearchBarComponent } from "../search-bar/search-bar.component";
 import { CommonModule } from '@angular/common';
@@ -12,6 +12,8 @@ import { CommonModule } from '@angular/common';
 })
 
 export class ChatComponent {
+
+  @Input() chats: string[] = [];
 
   @Output() openNewMessage = new EventEmitter<void>();
 

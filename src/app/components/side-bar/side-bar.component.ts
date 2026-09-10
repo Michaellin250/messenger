@@ -21,6 +21,7 @@ export class SideBarComponent {
   isExpanded = false;
   isNewMessageVisible = false;
   placeIconBottom = 'bottomStick';
+  chats: string[] = [];
 
   @HostListener('window:resize')
   getScreenHeight() {
@@ -34,5 +35,13 @@ export class SideBarComponent {
 
   openNewMessage() {
     this.isNewMessageVisible = !this.isNewMessageVisible;
+  }
+
+  minimizeNewMessage() {
+    this.isNewMessageVisible = false;
+  }
+
+  addChat(name: string) {
+    this.chats.push(name);
   }
 }

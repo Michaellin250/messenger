@@ -1,12 +1,27 @@
 <div class="largeMessage">
-  
+
   <div class="top-bar">
-    <h5>To: </h5>
+    <div class="recipient">
+      <h5>{{ recipient || 'To:' }}</h5>
+      <input
+        *ngIf="!recipient"
+        #nameInput
+        class="recipient-input"
+        type="text"
+        placeholder="Type a name"
+        aria-label="Recipient name"
+        (keyup.enter)="setRecipient(nameInput.value)"
+        (blur)="setRecipient(nameInput.value)" />
+    </div>
     <div class="top-right-icons">
       <mat-icon>phone</mat-icon>
       <mat-icon>video_call</mat-icon>
-      <mat-icon>remove_circle</mat-icon>
+      <mat-icon (click)="minimize.emit()">remove_circle</mat-icon>
     </div>
+  </div>
+
+  <div class="message-body">
+    <div class="sent-message" *ngFor="let message of messages">{{ message }}</div>
   </div>
 
   <div class="bottom-icons">
@@ -14,7 +29,14 @@
     <mat-icon>photo_camera_back</mat-icon>
     <mat-icon>sticky_note_2</mat-icon>
     <mat-icon>gif_box</mat-icon>
-    <mat-icon>send</mat-icon>
+    <input
+      #messageInput
+      class="message-input"
+      type="text"
+      placeholder="Aa"
+      aria-label="Message"
+      (keyup.enter)="sendMessage(messageInput)" />
+    <mat-icon (click)="sendMessage(messageInput)">send</mat-icon>
   </div>
 
 </div>

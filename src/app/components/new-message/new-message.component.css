@@ -1,3 +1,9 @@
+:host {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+}
+
 .largeMessage {
   height: 100%;
   flex: 1;
@@ -14,6 +20,59 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 12px;
+}
+
+.recipient {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 0;
+}
+
+.recipient h5 {
+  margin: 0;
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 20px;
+  white-space: nowrap;
+}
+
+.recipient-input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  padding: 6px 4px;
+  background: transparent;
+  border-bottom: 1px solid #ddd;
+}
+
+.message-body {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  padding: 12px 4px;
+}
+
+.sent-message {
+  max-width: 70%;
+  padding: 8px 12px;
+  border-radius: 16px;
+  background-color: #0a7cff;
+  color: #fff;
+  font-size: 14px;
+  word-break: break-word;
+}
+
+.top-right-icons {
+  flex-shrink: 0;
 }
 
 .top-right-icons mat-icon {
@@ -21,8 +80,28 @@
   cursor: pointer;
 }
 
+.top-right-icons mat-icon:hover {
+  color: #0a7cff;
+}
+
 .bottom-icons {
   margin-top: auto;
   display: flex;
+  align-items: center;
   gap: 10px;
+}
+
+.bottom-icons mat-icon {
+  cursor: pointer;
+}
+
+.message-input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  padding: 8px 14px;
+  border-radius: 18px;
+  background-color: #f0f0f0;
 }
